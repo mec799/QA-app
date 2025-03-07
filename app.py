@@ -137,7 +137,7 @@ if "flashcards" not in st.session_state or not st.session_state["flashcards"]:
     st.markdown(
         """
         <div style='text-align: center; padding: 20px; background: #f9f9f9; border-radius: 10px; margin-bottom: 20px;'>
-            <h2 style='color: #ff6f61;'>Kullanım Kılavuzu</h2>
+            <h2 style='color: #ff6f61;'>Kullanım Kılavuzu (Lütfen Light Mode ile Kullanın)</h2>
             <p style='color: #333;'>Bu uygulama ile resimlerden metin çıkarabilir ve Türkçe flashcard’lar oluşturabilirsiniz!</p>
             <ul style='text-align: left; display: inline-block;'>
                 <li><strong>1. API Key’leri Girin:</strong> Sol panelde Mistral ve OpenAI API key’lerinizi girin.</li>
@@ -158,6 +158,29 @@ with st.sidebar:
         unsafe_allow_html=True
     )
     st.markdown("### Ayarlar")
+    st.markdown("### Lütfen Light Mode ile Kullanın")
+    st.markdown(
+        """
+        ### Genel Bilgi ve Kullanım Limitleri
+        Bu uygulama, ders notlarınızı OCR ile metne çevirir ve Türkçe flashcard’lar oluşturur.  
+        - **Amaç:** Eğitim materyallerinizi hızlıca öğrenme kartlarına dönüştürmek.  
+        - **Limitler:**  
+          - En fazla 5 resim yüklenebilir.  
+          - Her resim 5MB’tan küçük olmalıdır (daha büyük resimler işlem süresini uzatabilir).  
+          - API çağrıları OpenAI ve Mistral limitlerine tabidir, aşırı kullanımda hata alabilirsiniz.  
+
+        ### Hata Durumunda Ne Yapmalı?  
+        - **OCR Hatası:** Resimlerin net olduğundan emin olun, gerekirse yeniden yükleyin.  
+        - **Flashcard Oluşturma Hatası:** Metni kontrol edin, metin boşsa veya anlamsızsa flashcard oluşturulamayabilir.  
+        - **API Hatası:** API key’lerinizi kontrol edin, limit aşımı olabilir. API sağlayıcınızın dokümantasyonunu kontrol edin.  
+        - Sorun devam ederse, bana ulaşın!  
+
+        ### Bana Ulaşın 😴  
+        Herhangi bir sorun veya öneri için:  
+        <a href="https://www.linkedin.com/in/m-enes-çiftçi-a58b411b9" target="_blank">LinkedIn</a>
+        """,
+        unsafe_allow_html=True
+    )
     mistral_api_key = st.text_input("Mistral API Key", type="password")
     openai_api_key = st.text_input("OpenAI API Key", type="password")
     if not mistral_api_key or not openai_api_key:
@@ -169,14 +192,6 @@ with st.sidebar:
     # API key’lerin altına bilgi bölümü
     st.markdown(
         """
-        ### Genel Bilgi ve Kullanım Limitleri
-        Bu uygulama, ders notlarınızı OCR ile metne çevirir ve Türkçe flashcard’lar oluşturur.  
-        - **Amaç:** Eğitim materyallerinizi hızlıca öğrenme kartlarına dönüştürmek.  
-        - **Limitler:**  
-          - En fazla 5 resim yüklenebilir.  
-          - Her resim 5MB’tan küçük olmalıdır (daha büyük resimler işlem süresini uzatabilir).  
-          - API çağrıları OpenAI ve Mistral limitlerine tabidir, aşırı kullanımda hata alabilirsiniz.  
-
         ### Hata Durumunda Ne Yapmalı?  
         - **OCR Hatası:** Resimlerin net olduğundan emin olun, gerekirse yeniden yükleyin.  
         - **Flashcard Oluşturma Hatası:** Metni kontrol edin, metin boşsa veya anlamsızsa flashcard oluşturulamayabilir.  
