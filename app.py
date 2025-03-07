@@ -168,16 +168,6 @@ with st.sidebar:
           - En fazla 5 resim yüklenebilir.  
           - Her resim 5MB’tan küçük olmalıdır (daha büyük resimler işlem süresini uzatabilir).  
           - API çağrıları OpenAI ve Mistral limitlerine tabidir, aşırı kullanımda hata alabilirsiniz.  
-
-        ### Hata Durumunda Ne Yapmalı?  
-        - **OCR Hatası:** Resimlerin net olduğundan emin olun, gerekirse yeniden yükleyin.  
-        - **Flashcard Oluşturma Hatası:** Metni kontrol edin, metin boşsa veya anlamsızsa flashcard oluşturulamayabilir.  
-        - **API Hatası:** API key’lerinizi kontrol edin, limit aşımı olabilir. API sağlayıcınızın dokümantasyonunu kontrol edin.  
-        - Sorun devam ederse, bana ulaşın!  
-
-        ### Bana Ulaşın 😴  
-        Herhangi bir sorun veya öneri için:  
-        <a href="https://www.linkedin.com/in/m-enes-çiftçi-a58b411b9" target="_blank">LinkedIn</a>
         """,
         unsafe_allow_html=True
     )
