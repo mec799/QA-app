@@ -138,7 +138,7 @@ if "flashcards" not in st.session_state or not st.session_state["flashcards"]:
         """
         <div style='text-align: center; padding: 20px; background: #f9f9f9; border-radius: 10px; margin-bottom: 20px;'>
             <h2 style='color: #ff6f61;'>Kullanım Kılavuzu</h2>
-            <h3 style='color: #ff6f61;'>Light Mode ile Kullanın(Sağ üst kısımdan ayarlayabilirsiniz</h3>
+            <h3 style='color: #ff6f61;'>Light Mode ile Kullanın(Sağ üst kısımdan ayarlayabilirsiniz)</h3>
             <p style='color: #333;'>Bu uygulama ile resimlerden metin çıkarabilir ve Türkçe flashcard’lar oluşturabilirsiniz!</p>
             <ul style='text-align: left; display: inline-block;'>
                 <li><strong>1. API Key’leri Girin:</strong> Sol panelde Mistral ve OpenAI API key’lerinizi girin.</li>
