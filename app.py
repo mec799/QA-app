@@ -138,8 +138,7 @@ if "flashcards" not in st.session_state or not st.session_state["flashcards"]:
         """
         <div style="text-align: center; padding: 20px; border-radius: 10px; margin-bottom: 20px; color: #ff6f61;">
             <h2>Kullanım Kılavuzu</h2>
-            <h3>Light Mode ile Kullanın (Sağ üst kısımdan ayarlayabilirsiniz)</h3>
-            <p>Bu uygulama ile resimlerden metin çıkarabilir ve Türkçe flashcard’lar oluşturabilirsiniz!</p>
+            <p>Eğer solda bir panel (sidebar) göremiyorsan sol üst köşedeki simgeye tıkla. Açılan panelde API Key’lerini girebileceğin bölümü bulacaksın.</p>
             <ul style="text-align: left; display: inline-block;">
                 <li><strong>1. API Key’leri Girin:</strong> Sol panelde Mistral ve OpenAI API key’lerinizi girin.</li>
                 <li><strong>2. Resim Yükleyin:</strong> En fazla 5 resim yükleyin (jpg, jpeg, png).</li>
@@ -239,7 +238,7 @@ with col1:
 
     if "ocr_result" in st.session_state:
         st.markdown("### Çıkarılan Metni Düzenle")
-        edited_text = st.text_area("Çıkarılan birleşik metni düzenleyin", value=st.session_state["ocr_result"], height=300, key="text_area")
+        edited_text = st.text_area("Çıkarılan birleşik metni düzenleyin (Dark Mode açıkken metin gözükmeyebilir fakat aşağıdaki butondan flashcard oluşturabilirsiniz. Daha iyi deneyim için Light Mode kullanın)", value=st.session_state["ocr_result"], height=300, key="text_area")
         st.session_state["edited_ocr"] = edited_text
         num_cards = st.slider("Oluşturulacak Flashcard Sayısı", 1, 5, 3)
         if st.button("Flashcard Oluştur"):
