@@ -238,7 +238,7 @@ with col1:
 
     if "ocr_result" in st.session_state:
         st.markdown("### Çıkarılan Metni Düzenle")
-        edited_text = st.text_area("Yapay zeka hata yapabilir. Sadece yanlış yazıldığını düşündüğünüz kelime varsa düzeltebilirsin fakat bu da opsiyoneldir daha düzgün flashcardlar için yapabilirsin yoksa direkt flashcard oluşturmaya geçebilirsin.(Dark Mode açıkken aşağıdaki metin gözükmeyebilir fakat aşağıdaki butondan flashcard oluşturmaya devam edebilirsiniz. Daha iyi deneyim için Light Mode kullanın)", value=st.session_state["ocr_result"], height=300, key="text_area")
+        edited_text = st.text_area("Yapay zeka hata yapabilir. Sadece yanlış yazıldığını düşündüğün kelime varsa düzeltebilirsin fakat bu da opsiyoneldir daha düzgün flashcardlar için yapabilirsin yoksa direkt flashcard oluşturmaya geçebilirsin.(Dark Mode açıkken aşağıdaki metin gözükmeyebilir fakat aşağıdaki butondan flashcard oluşturmaya devam edebilirsiniz. Daha iyi deneyim için Light Mode kullanın)", value=st.session_state["ocr_result"], height=300, key="text_area")
         st.session_state["edited_ocr"] = edited_text
         num_cards = st.slider("Oluşturulacak Flashcard Sayısı", 1, 5, 3)
         if st.button("Flashcard Oluştur"):
