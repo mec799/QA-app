@@ -136,7 +136,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 if "flashcards" not in st.session_state or not st.session_state["flashcards"]:
     st.markdown(
         """
-        <div style="text-align: center; padding: 20px; border-radius: 10px; margin-bottom: 20px; color: #ff6f61;">
+        <div style="text-align: center; padding: 20px; border-radius: 10px; margin-bottom: 20px; color:#f08080;">
             <h2>Kullanım Kılavuzu</h2>
             <p>Eğer solda bir panel (sidebar) göremiyorsan sol üst köşedeki simgeye tıkla. Açılan panelde API Key’lerini girebileceğin bölümü bulacaksın.</p>
             <ul style="text-align: left; display: inline-block;">
@@ -159,7 +159,7 @@ with st.sidebar:
         unsafe_allow_html=True
     )
     st.markdown("### Ayarlar")
-    st.markdown("### Lütfen Light Mode ile Kullanın")
+    st.markdown("### Daha iyi Deneyim için Lütfen Light Mode ile Kullanın")
     st.markdown(
         """
         ### Genel Bilgi ve Kullanım Limitleri
