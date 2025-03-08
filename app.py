@@ -136,7 +136,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 if "flashcards" not in st.session_state or not st.session_state["flashcards"]:
     st.markdown(
         """
-        <div style="text-align: center; padding: 20px; background: #f9f9f9; border-radius: 10px; margin-bottom: 20px; color: #ff6f61;">
+        <div style="text-align: center; padding: 20px; border-radius: 10px; margin-bottom: 20px; color: #ff6f61;">
             <h2>Kullanım Kılavuzu</h2>
             <h3>Light Mode ile Kullanın (Sağ üst kısımdan ayarlayabilirsiniz)</h3>
             <p>Bu uygulama ile resimlerden metin çıkarabilir ve Türkçe flashcard’lar oluşturabilirsiniz!</p>
