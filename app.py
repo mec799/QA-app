@@ -136,11 +136,11 @@ st.markdown('</div>', unsafe_allow_html=True)
 if "flashcards" not in st.session_state or not st.session_state["flashcards"]:
     st.markdown(
         """
-        <div style='text-align: center; padding: 20px; background: #f9f9f9; border-radius: 10px; margin-bottom: 20px;'>
-            <h2 style='color: #ff6f61;'>Kullanım Kılavuzu</h2>
-            <h3 style='color: #ff6f61;'>Light Mode ile Kullanın(Sağ üst kısımdan ayarlayabilirsiniz)</h3>
-            <p style='color: #333;'>Bu uygulama ile resimlerden metin çıkarabilir ve Türkçe flashcard’lar oluşturabilirsiniz!</p>
-            <ul style='text-align: left; display: inline-block;'>
+        <div style="text-align: center; padding: 20px; background: #f9f9f9; border-radius: 10px; margin-bottom: 20px; color: #ff6f61;">
+            <h2>Kullanım Kılavuzu</h2>
+            <h3>Light Mode ile Kullanın (Sağ üst kısımdan ayarlayabilirsiniz)</h3>
+            <p>Bu uygulama ile resimlerden metin çıkarabilir ve Türkçe flashcard’lar oluşturabilirsiniz!</p>
+            <ul style="text-align: left; display: inline-block;">
                 <li><strong>1. API Key’leri Girin:</strong> Sol panelde Mistral ve OpenAI API key’lerinizi girin.</li>
                 <li><strong>2. Resim Yükleyin:</strong> En fazla 5 resim yükleyin (jpg, jpeg, png).</li>
                 <li><strong>3. OCR İşlemi:</strong> "OCR İşle" butonuna basarak metni çıkarın.</li>
@@ -151,6 +151,7 @@ if "flashcards" not in st.session_state or not st.session_state["flashcards"]:
         """,
         unsafe_allow_html=True
     )
+
 
 # Sidebar
 with st.sidebar:
